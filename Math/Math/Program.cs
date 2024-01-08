@@ -12,6 +12,8 @@ namespace Maths
             const string IntroduceNumber = "Introdueix un nombre";
             const string IntroduceBaseNumber = "Introdueix un nombre base";
             const string IntroducePower = "Introdueix un nombre potència";
+            const string IntroduceBase = "Introdueix un nombre base";
+            const string IntroduceExponent = "Introdueix un nombre exponent";
             bool exit = false;
             while (exit == false)
             {
@@ -27,7 +29,12 @@ namespace Maths
                         Console.WriteLine(OddNumber(number));
                         break;
                     case "2":
-                       
+                        Console.WriteLine(IntroduceBase);
+                        int baseNumber = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(IntroduceExponent);
+                        int power = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(Power(baseNumber, power));
+                        break;
                     case "3":
 
 
@@ -54,6 +61,15 @@ namespace Maths
                 return "El nombre és senar";
             }
         }
-       
+        public static int Power(int number, int power)
+        {
+            int result = 1;
+            for (int i = 0; i < power; i++)
+            {
+                result = result * number;
+            }
+            return result;
+        }
+
     }
 }
