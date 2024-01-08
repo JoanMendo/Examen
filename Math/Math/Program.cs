@@ -10,6 +10,8 @@ namespace Maths
             const string ExitMessage = "Gràcies per utilitzar el programa.";
             const string Error = "Error, opció incorrecta";
             const string IntroduceNumber = "Introdueix un nombre";
+            const string IntroduceBaseNumber = "Introdueix un nombre base";
+            const string IntroducePower = "Introdueix un nombre potència";
             bool exit = false;
             while (exit == false)
             {
@@ -25,8 +27,9 @@ namespace Maths
                         Console.WriteLine(OddNumber(number));
                         break;
                     case "2":
-
+                       
                     case "3":
+
 
                     case "4":
 
@@ -51,5 +54,6 @@ namespace Maths
                 return "El nombre és senar";
             }
         }
+       
     }
 }
