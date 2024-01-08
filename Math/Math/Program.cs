@@ -14,6 +14,8 @@ namespace Maths
             const string IntroducePower = "Introdueix un nombre potència";
             const string IntroduceBase = "Introdueix un nombre base";
             const string IntroduceExponent = "Introdueix un nombre exponent";
+            const string Min = "Introdueix el nombre mínim";
+            const string Max = "Introdueix el nombre màxim";
             bool exit = false;
             while (exit == false)
             {
@@ -36,7 +38,10 @@ namespace Maths
                         Console.WriteLine(Power(baseNumber, power));
                         break;
                     case "3":
-
+                        Console.WriteLine(Min);
+                        int minNumber = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(Max);
+                        int maxNumber = Convert.ToInt32(Console.ReadLine());
 
                     case "4":
 
@@ -70,6 +75,10 @@ namespace Maths
             }
             return result;
         }
-
+        public static int RandomNumber(int min, int max)
+        {
+            Random random = new Random();
+            return random.Next(min, max);
+        }
     }
 }
